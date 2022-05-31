@@ -2,17 +2,20 @@
 
 using namespace std;
 
-int fib(int n) {
-    if (n == 2 || n == 3) {
-        return 1;
-    } else {
-        return (fib(n-1) + fib(n-2));
+void fiba(int n) {
+    int a = 0;
+    int b = 1;
+    for (int i = 0; i < n; ++i) {
+        cout << a << endl;
+        int temp = a;
+        a += b;
+        b = temp;
     }
 }
 
 int main() {
-    cout << "Hello, World!" <<endl;;
-    cout << fib(10);
+    cout << "Hello, World!" <<endl; 
+    fiba(10);
     
     return 0;
 }
